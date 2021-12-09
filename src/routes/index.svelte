@@ -17,14 +17,34 @@
   const { posts } = $data
 </script>
 
-{#each posts as post}
-  <a href={`/posts/${post.slug}`}>{post.title}</a>
+<svelte:head>
+  <title>Houdini with GraphCMS | Welcome</title>
+</svelte:head>
+
+<h1 class="text-4xl mb-10 font-extrabold">Houdini with GraphCMS</h1>
+
+{#each posts as { title, slug, excerpt, coverImage, tags }}
+  <div class="card text-center shadow-2xl mb-20">
+    <figure class="">
+      <img
+        class=""
+        src={coverImage.url}
+        alt={`Cover image for ${title}`}
+      />
+    </figure>
+    <div class="card-body">
+      <h2 class="title">{title}</h2>
+      <p>{excerpt}</p>
+      <div class="flex justify-center mt-5 space-x-2">
+        {#each tags as tag}
+          <span class="badge badge-primary">{tag}</span>
+        {/each}
+      </div>
+      <div class="justify-center card-actions">
+        <a href={`/posts/${slug}`} class="btn btn-outline btn-primary"
+          >Read &rArr;</a
+        >
+      </div>
+    </div>
+  </div>
 {/each}
-
-<pre>{JSON.stringify(posts, null, 2)}</pre>
-
-<h1>Welcome to SvelteKit</h1>
-<p>
-  Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the
-  documentation
-</p>
