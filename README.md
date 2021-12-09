@@ -2,6 +2,8 @@
 
 An example of using Houdini with SvelteKit and GraphCMS.
 
+This example is based off of the GraphCMS blog starter template.
+
 ## Guide from `npm init svelte@next`
 
 Bootstrap project with `npx houdini init`, add your GraphQL endpoint.
@@ -100,3 +102,35 @@ Make sure to add the Houdini environment to the
 
 <slot />
 ```
+
+## Custom scalars
+
+With the GraphCMS blog starter template there's a date field which
+Houdini will complain about no scalar for Date, you can add in a
+custom scalar with [this config]:
+
+```js
+const config = {
+  // ...
+  scalars: {
+    // the name of the scalar we are configuring
+    Date: {
+      // the corresponding typescript type (what the typedef generator leaves behind in the response and operation inputs)
+      type: 'Date',
+      // turn the api's response into that type
+      unmarshal(val) {
+        const date = new Date(0)
+        date.setMilliseconds(val)
+
+        return date
+      },
+      // turn the value into something the API can use
+      marshal(date) {
+        return date.getTime()
+      },
+    },
+  },
+```
+
+[this config]:
+  https://github.com/AlecAivazis/houdini/issues/56#issuecomment-871556477
