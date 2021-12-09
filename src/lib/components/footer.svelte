@@ -1,5 +1,5 @@
 <footer
-  class="p-10 bg-primary footer bg-base-200 text-base-content footer-center"
+  class="p-10 bg-primary footer text-base-content footer-center"
 >
   <div class="grid grid-flow-col gap-4">
     <a class="link link-hover">About us</a>

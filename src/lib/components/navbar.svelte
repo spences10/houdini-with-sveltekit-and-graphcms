@@ -4,11 +4,11 @@
   export let pages
 </script>
 
-<div
-  class="navbar mb-2 shadow-lg bg-neutral text-neutral-content rounded-box"
->
+<div class="navbar mb-10 shadow-lg bg-neutral text-neutral-content">
   <div class="px-2 mx-2 navbar-start">
-    <span class="text-lg font-bold"> Sparkles Blog </span>
+    <a href="/">
+      <span class="text-lg font-bold"> Houdini with GraphCMS </span>
+    </a>
   </div>
   <div class="px-2 mx-2 navbar-center">
     <div class="flex items-stretch">
