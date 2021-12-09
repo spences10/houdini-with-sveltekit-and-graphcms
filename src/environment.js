@@ -1,5 +1,6 @@
 import { Environment } from '$houdini'
 const GRAPHQL_API = import.meta.env.VITE_GRAPHQL_API
+const SECRET_TOKEN = import.meta.env.VITE_SECRET_TOKEN
 
 export default new Environment(async function ({
   text,
@@ -10,6 +11,8 @@ export default new Environment(async function ({
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
+      // this is here to demonstrate that secrets can't be used with Vite
+      Authorization: `Bearer ${SECRET_TOKEN}`,
     },
     body: JSON.stringify({
       query: text,
