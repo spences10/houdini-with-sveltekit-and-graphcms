@@ -1,46 +1,83 @@
-# create-svelte
+# Houdini with SvelteKit and GraphCMS
 
-Everything you need to build a Svelte project, powered by
-[`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+Bootstrap project with `npx houdini init`, add your GraphQL endpoint.
 
-## Creating a project
+Add `$houdini` to your `.gitignore`.
 
-If you're seeing this, you've probably already done this step.
-Congrats!
+Move the GraphQL endpoint out of `src/environment.js` into a `.env`
+file, and remove the `apiUrl` property from the `houdini.config.js`:
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+`src/environment.js`:
 
-# create a new project in my-app
-npm init svelte@next my-app
+```js
+import { Environment } from '$houdini'
+const GRAPHQL_API = import.meta.env.VITE_GRAPHQL_API
+
+export default new Environment(async function ({
+  text,
+  variables = {},
+}) {
+  // send the request to the api
+  const result = await this.fetch(GRAPHQL_API, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      query: text,
+      variables,
+    }),
+  })
+
+  // parse the result as json
+  return await result.json()
+})
 ```
 
-> Note: the `@next` is temporary
+`houdini.config.js`
 
-## Developing
+```diff
+const GRAPHQL_API = import.meta.env.VITE_GRAPHQL_API
 
-Once you've created a project and installed dependencies with
-`npm install` (or `pnpm install` or `yarn`), start a development
-server:
+/** @type {import('houdini').ConfigFile} */
+const config = {
+  schemaPath: './schema.graphql',
+  sourceGlob: 'src/**/*.svelte',
+  module: 'esm',
+  framework: 'kit',
+-  apiUrl: GRAPHQL_API,
+}
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+export default config
 ```
 
-## Building
+Use `npx houdini generate` to create the files needed for the queries.
 
-Before creating a production version of your app, install an
-[adapter](https://kit.svelte.dev/docs#adapters) for your target
-environment. Then:
+Add `npx houdini generate` to your scripts:
 
-```bash
-npm run build
+```json
+"scripts": {
+  "dev": "npx houdini generate && svelte-kit dev",
+  "build": "npx houdini generate && svelte-kit build",
+  "preview": "npx houdini generate && svelte-kit preview"
+}
 ```
 
-> You can preview the built app with `npm run preview`, regardless of
-> whether you installed an adapter. This should _not_ be used to serve
-> your app in production.
+Add the following config to your SvelteKt config `svelte.config.js`:
+
+```js
+vite: {
+  resolve: {
+    alias: {
+      $houdini: path.resolve('.', '$houdini'),
+    },
+  },
+  server: {
+    fs: {
+      // Allow serving files from one level up to the project root
+      // posts, copy
+      allow: ['..'],
+    },
+  },
+},
+```
