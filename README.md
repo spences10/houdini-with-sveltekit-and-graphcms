@@ -1,5 +1,9 @@
 # Houdini with SvelteKit and GraphCMS
 
+An example of using Houdini with SvelteKit and GraphCMS.
+
+## Guide from `npm init svelte@next`
+
 Bootstrap project with `npx houdini init`, add your GraphQL endpoint.
 
 Add `$houdini` to your `.gitignore`.
@@ -9,16 +13,17 @@ file, and remove the `apiUrl` property from the `houdini.config.js`:
 
 `src/environment.js`:
 
-```js
+```diff
 import { Environment } from '$houdini'
-const GRAPHQL_API = import.meta.env.VITE_GRAPHQL_API
++const GRAPHQL_API = import.meta.env.VITE_GRAPHQL_API
 
 export default new Environment(async function ({
   text,
   variables = {},
 }) {
   // send the request to the api
-  const result = await this.fetch(GRAPHQL_API, {
+-  const result = await this.fetch('https://graphqlendpoint.com/graphql', {
++  const result = await this.fetch(GRAPHQL_API, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -51,8 +56,6 @@ const config = {
 export default config
 ```
 
-Use `npx houdini generate` to create the files needed for the queries.
-
 Add `npx houdini generate` to your scripts:
 
 ```json
@@ -81,6 +84,8 @@ vite: {
   },
 },
 ```
+
+Use `npx houdini generate` to create the files needed for the queries.
 
 Make sure to add the Houdini environment to the
 `src/routes/__layout.svelte` file:
