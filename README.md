@@ -81,3 +81,17 @@ vite: {
   },
 },
 ```
+
+Make sure to add the Houdini environment to the
+`src/routes/__layout.svelte` file:
+
+```svelte
+<script context="module">
+  import { setEnvironment } from '$houdini'
+  import env from '../environment'
+
+  setEnvironment(env)
+</script>
+
+<slot />
+```
