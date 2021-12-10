@@ -21,7 +21,13 @@
   <title>Houdini with GraphCMS | Welcome</title>
 </svelte:head>
 
-<h1 class="text-4xl mb-10 font-extrabold">Houdini with GraphCMS</h1>
+<div class="prose mb-12">
+  <h1>Houdini with GraphCMS</h1>
+  <p>
+    An example project using the GraphCMS blog template and Houdini
+    for the GraphQL client
+  </p>
+</div>
 
 {#each posts as { title, slug, excerpt, coverImage, tags }}
   <div class="card text-center shadow-2xl mb-20">
@@ -32,7 +38,7 @@
         alt={`Cover image for ${title}`}
       />
     </figure>
-    <div class="card-body">
+    <div class="card-body prose">
       <h2 class="title">{title}</h2>
       <p>{excerpt}</p>
       <div class="flex justify-center mt-5 space-x-2">
