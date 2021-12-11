@@ -2,14 +2,14 @@
   class="p-10 bg-primary footer text-base-content footer-center"
 >
   <div class="grid grid-flow-col gap-4">
-    <a class="link link-hover">About us</a>
-    <a class="link link-hover">Contact</a>
-    <a class="link link-hover">Jobs</a>
-    <a class="link link-hover">Press kit</a>
+    <a class="link link-hover" href="/">About us</a>
+    <a class="link link-hover" href="/">Contact</a>
+    <a class="link link-hover" href="/">Jobs</a>
+    <a class="link link-hover" href="/">Press kit</a>
   </div>
   <div>
     <div class="grid grid-flow-col gap-4">
-      <a>
+      <a href="/">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -22,7 +22,7 @@
           />
         </svg>
       </a>
-      <a>
+      <a href="/">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -35,7 +35,7 @@
           />
         </svg>
       </a>
-      <a>
+      <a href="/">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
