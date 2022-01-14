@@ -16,7 +16,7 @@
     "@tailwindcss/typography": "0.5.0",
     "autoprefixer": "10.4.2",
     "cssnano": "5.0.15",
-    "daisyui": "1.22.0",
+    "daisyui": "1.22.2",
     "houdini": "0.12.1",
     "houdini-preprocess": "0.12.1",
     "postcss": "8.4.5",
