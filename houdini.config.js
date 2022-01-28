@@ -11,9 +11,7 @@ const config = {
       type: 'Date',
       // turn the api's response into that type
       unmarshal(val) {
-        const date = new Date(0)
-        date.setMilliseconds(val)
-
+        const date = new Date(val).toISOString()
         return date
       },
       // turn the value into something the API can use
