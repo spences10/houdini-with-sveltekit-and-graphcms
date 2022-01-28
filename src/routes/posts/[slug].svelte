@@ -1,5 +1,5 @@
 <script context="module">
-  export const PostQueryVariables = ({ page: { params } }) => {
+  export const PostQueryVariables = ({ params }) => {
     const { slug } = params
     return {
       slug,
