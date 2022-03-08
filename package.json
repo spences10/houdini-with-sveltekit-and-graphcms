@@ -17,7 +17,7 @@
     "autoprefixer": "10.4.2",
     "cssnano": "5.1.0",
     "daisyui": "2.6.0",
-    "houdini": "0.12.1",
+    "houdini": "0.12.3",
     "houdini-preprocess": "0.12.2",
     "postcss": "8.4.8",
     "postcss-load-config": "3.1.3",
