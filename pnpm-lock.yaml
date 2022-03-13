@@ -7,7 +7,7 @@ specifiers:
   autoprefixer: 10.4.2
   cssnano: 5.1.1
   daisyui: 2.6.4
-  houdini: 0.12.3
+  houdini: 0.12.4
   houdini-preprocess: 0.12.4
   postcss: 8.4.8
   postcss-load-config: 3.1.3
@@ -25,7 +25,7 @@ devDependencies:
   autoprefixer: 10.4.2_postcss@8.4.8
   cssnano: 5.1.1_postcss@8.4.8
   daisyui: 2.6.4_554c024960c0d85659bdf1e5e950b7f7
-  houdini: 0.12.3
+  houdini: 0.12.4
   houdini-preprocess: 0.12.4
   postcss: 8.4.8
   postcss-load-config: 3.1.3
@@ -1127,29 +1127,6 @@ packages:
       prettier: 2.5.1
       prettier-plugin-svelte: 2.6.0_prettier@2.5.1+svelte@3.46.4
       recast: 0.20.5
-      svelte: 3.46.4
-    transitivePeerDependencies:
-      - rollup
-    dev: true
-
-  /houdini/0.12.3:
-    resolution: {integrity: sha512-d9a4oJiwfQ/c/AnyDkk9naR09KRnAkehmlVcKi+xxwCNmhcMrShKpc2BdF7MLCEXRPnfYPmnb3+pKw+XoBI2BQ==}
-    engines: {node: '>=14.13'}
-    hasBin: true
-    dependencies:
-      '@graphql-tools/merge': 6.2.17_graphql@15.8.0
-      '@types/inquirer': 7.3.3
-      babylon: 7.0.0-beta.47
-      commander: 7.2.0
-      estree-walker: 2.0.2
-      glob: 7.2.0
-      graphql: 15.8.0
-      houdini-common: 0.12.1_graphql@15.8.0
-      inquirer: 7.3.3
-      mkdirp: 1.0.4
-      node-fetch: 2.6.6
-      recast: 0.20.5
-      rollup-plugin-preserve-shebangs: 0.2.0
       svelte: 3.46.4
     transitivePeerDependencies:
       - rollup
