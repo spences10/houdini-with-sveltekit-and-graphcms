@@ -7,7 +7,7 @@ specifiers:
   autoprefixer: 10.4.4
   cssnano: 5.1.5
   daisyui: 2.13.4
-  houdini: 0.13.2
+  houdini: 0.13.3
   houdini-preprocess: 0.13.1
   postcss: 8.4.12
   postcss-load-config: 3.1.3
@@ -25,7 +25,7 @@ devDependencies:
   autoprefixer: 10.4.4_postcss@8.4.12
   cssnano: 5.1.5_postcss@8.4.12
   daisyui: 2.13.4_081650f2f4dba35b17265937ab2a2ec0
-  houdini: 0.13.2
+  houdini: 0.13.3
   houdini-preprocess: 0.13.1
   postcss: 8.4.12
   postcss-load-config: 3.1.3
@@ -1114,8 +1114,8 @@ packages:
       mkdirp: 1.0.4
     dev: true
 
-  /houdini-common/0.13.0_graphql@15.8.0:
-    resolution: {integrity: sha512-4dcAjnpsNGH+S+ZiJgNt4GhFw8MfP2ekz30skrKhQzC2YmRhe8TrPw8GMYY2IN0/gRq4j2OFajbBphcYmFbTVg==}
+  /houdini-common/0.13.3_graphql@15.8.0:
+    resolution: {integrity: sha512-LH5B1a8eC3V0Vu70gQfI/fUfuWFYoZ7hdgGHoWF9rC7FRtKP8iytS1O4d0+ThAqISPDan1gE7xoJnxLCsVfQrA==}
     peerDependencies:
       graphql: ^15.x
     dependencies:
@@ -1165,8 +1165,8 @@ packages:
       - rollup
     dev: true
 
-  /houdini/0.13.2:
-    resolution: {integrity: sha512-DMyLgmp0+vpw171Z6iQmczSTkLS8sGblRC+TD+MYznjOAQuiCq5h7KsaJalUCcL7gg1Bh4E5ZByiNxWXrEqp0Q==}
+  /houdini/0.13.3:
+    resolution: {integrity: sha512-t5dO4tDPpJMGdh7+GrupCHG9NV/+mxx7ZcqQcA9nZ/sp3eP8kmIQf4X2QYSFZOrwEcCJHEZ+FJj3iSiR4H+Dig==}
     engines: {node: '>=14.13'}
     hasBin: true
     dependencies:
@@ -1177,7 +1177,7 @@ packages:
       estree-walker: 2.0.2
       glob: 7.2.0
       graphql: 15.8.0
-      houdini-common: 0.13.0_graphql@15.8.0
+      houdini-common: 0.13.3_graphql@15.8.0
       inquirer: 7.3.3
       mkdirp: 1.0.4
       node-fetch: 2.6.6
