@@ -7,7 +7,7 @@ specifiers:
   autoprefixer: 10.4.4
   cssnano: 5.1.7
   daisyui: 2.13.6
-  houdini: 0.13.3
+  houdini: 0.13.7
   houdini-preprocess: 0.13.6
   postcss: 8.4.12
   postcss-load-config: 3.1.4
@@ -25,7 +25,7 @@ devDependencies:
   autoprefixer: 10.4.4_postcss@8.4.12
   cssnano: 5.1.7_postcss@8.4.12
   daisyui: 2.13.6_081650f2f4dba35b17265937ab2a2ec0
-  houdini: 0.13.3
+  houdini: 0.13.7
   houdini-preprocess: 0.13.6
   postcss: 8.4.12
   postcss-load-config: 3.1.4_postcss@8.4.12
@@ -1114,16 +1114,6 @@ packages:
       mkdirp: 1.0.4
     dev: true
 
-  /houdini-common/0.13.3_graphql@15.8.0:
-    resolution: {integrity: sha512-LH5B1a8eC3V0Vu70gQfI/fUfuWFYoZ7hdgGHoWF9rC7FRtKP8iytS1O4d0+ThAqISPDan1gE7xoJnxLCsVfQrA==}
-    peerDependencies:
-      graphql: ^15.x
-    dependencies:
-      '@babel/parser': 7.16.4
-      graphql: 15.8.0
-      mkdirp: 1.0.4
-    dev: true
-
   /houdini-common/0.13.6_graphql@15.5.0:
     resolution: {integrity: sha512-EVauz2ya3ebkakYaqSMpJUcSEBugaCFv58R5VbAusKcFTBj2ljRqaU0QGVXjrk+CnuvWEevvFtmsw1IySpmC8A==}
     peerDependencies:
@@ -1131,6 +1121,16 @@ packages:
     dependencies:
       '@babel/parser': 7.16.4
       graphql: 15.5.0
+      mkdirp: 1.0.4
+    dev: true
+
+  /houdini-common/0.13.6_graphql@15.8.0:
+    resolution: {integrity: sha512-EVauz2ya3ebkakYaqSMpJUcSEBugaCFv58R5VbAusKcFTBj2ljRqaU0QGVXjrk+CnuvWEevvFtmsw1IySpmC8A==}
+    peerDependencies:
+      graphql: ^15.x
+    dependencies:
+      '@babel/parser': 7.16.4
+      graphql: 15.8.0
       mkdirp: 1.0.4
     dev: true
 
@@ -1175,8 +1175,8 @@ packages:
       - rollup
     dev: true
 
-  /houdini/0.13.3:
-    resolution: {integrity: sha512-t5dO4tDPpJMGdh7+GrupCHG9NV/+mxx7ZcqQcA9nZ/sp3eP8kmIQf4X2QYSFZOrwEcCJHEZ+FJj3iSiR4H+Dig==}
+  /houdini/0.13.7:
+    resolution: {integrity: sha512-PYjq12FQMPyM7BTSSqUAZ4C4kMPYWn5i2bY+o8E87MmDQS/rXPFh3lkAaZLIFVTZtWu4mGOi3j+kdnf1rRoPSQ==}
     engines: {node: '>=14.13'}
     hasBin: true
     dependencies:
@@ -1187,7 +1187,7 @@ packages:
       estree-walker: 2.0.2
       glob: 7.2.0
       graphql: 15.8.0
-      houdini-common: 0.13.3_graphql@15.8.0
+      houdini-common: 0.13.6_graphql@15.8.0
       inquirer: 7.3.3
       mkdirp: 1.0.4
       node-fetch: 2.6.6
