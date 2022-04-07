@@ -7,7 +7,7 @@ specifiers:
   autoprefixer: 10.4.4
   cssnano: 5.1.7
   daisyui: 2.13.6
-  houdini: 0.13.7
+  houdini: 0.13.8
   houdini-preprocess: 0.13.8
   postcss: 8.4.12
   postcss-load-config: 3.1.4
@@ -20,12 +20,12 @@ specifiers:
 
 devDependencies:
   '@sveltejs/adapter-auto': 1.0.0-next.34
-  '@sveltejs/kit': 1.0.0-next.307_svelte@3.46.6
+  '@sveltejs/kit': 1.0.0-next.308_svelte@3.46.6
   '@tailwindcss/typography': 0.5.2_tailwindcss@3.0.23
   autoprefixer: 10.4.4_postcss@8.4.12
   cssnano: 5.1.7_postcss@8.4.12
   daisyui: 2.13.6_081650f2f4dba35b17265937ab2a2ec0
-  houdini: 0.13.7
+  houdini: 0.13.8
   houdini-preprocess: 0.13.8
   postcss: 8.4.12
   postcss-load-config: 3.1.4_postcss@8.4.12
@@ -178,8 +178,8 @@ packages:
       esbuild: 0.14.29
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.307_svelte@3.46.6:
-    resolution: {integrity: sha512-dVxSuP0YyGL6/4VVhjLxxj4hHlVscrXJttvsffGnFOUJ1JtrJ496xoxhxB7iSVpYdTMXocjA9w54ZIC59m0J7A==}
+  /@sveltejs/kit/1.0.0-next.308_svelte@3.46.6:
+    resolution: {integrity: sha512-/ORLef5kZEMTUgUkdSQ5Lsn3IKBRNYmLdJ26JjtSa03nPKsybvSMiGIho9WS6ESBw3+XaYF91TqksTyr/gTeoA==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
@@ -1104,16 +1104,6 @@ packages:
       function-bind: 1.1.1
     dev: true
 
-  /houdini-common/0.13.6_graphql@15.8.0:
-    resolution: {integrity: sha512-EVauz2ya3ebkakYaqSMpJUcSEBugaCFv58R5VbAusKcFTBj2ljRqaU0QGVXjrk+CnuvWEevvFtmsw1IySpmC8A==}
-    peerDependencies:
-      graphql: ^15.x
-    dependencies:
-      '@babel/parser': 7.16.4
-      graphql: 15.8.0
-      mkdirp: 1.0.4
-    dev: true
-
   /houdini-common/0.13.8_graphql@15.5.0:
     resolution: {integrity: sha512-pQ3l4VOBCGcG2NHnJYKaI2ean7fN3fJy1gnZOrTKpPupDahOrPekmGf877SguVeIB7ChF2mt44NQ7vS0r/Ur7g==}
     peerDependencies:
@@ -1147,29 +1137,6 @@ packages:
       prettier: 2.6.2
       prettier-plugin-svelte: 2.6.0_prettier@2.6.2+svelte@3.46.6
       recast: 0.20.5
-      svelte: 3.46.6
-    transitivePeerDependencies:
-      - rollup
-    dev: true
-
-  /houdini/0.13.7:
-    resolution: {integrity: sha512-PYjq12FQMPyM7BTSSqUAZ4C4kMPYWn5i2bY+o8E87MmDQS/rXPFh3lkAaZLIFVTZtWu4mGOi3j+kdnf1rRoPSQ==}
-    engines: {node: '>=14.13'}
-    hasBin: true
-    dependencies:
-      '@graphql-tools/merge': 6.2.17_graphql@15.8.0
-      '@types/inquirer': 7.3.3
-      babylon: 7.0.0-beta.47
-      commander: 7.2.0
-      estree-walker: 2.0.2
-      glob: 7.2.0
-      graphql: 15.8.0
-      houdini-common: 0.13.6_graphql@15.8.0
-      inquirer: 7.3.3
-      mkdirp: 1.0.4
-      node-fetch: 2.6.6
-      recast: 0.20.5
-      rollup-plugin-preserve-shebangs: 0.2.0
       svelte: 3.46.6
     transitivePeerDependencies:
       - rollup
