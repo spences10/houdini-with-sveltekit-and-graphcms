@@ -8,7 +8,7 @@ specifiers:
   cssnano: 5.1.7
   daisyui: 2.13.6
   houdini: 0.13.10
-  houdini-preprocess: 0.13.8
+  houdini-preprocess: 0.13.10
   postcss: 8.4.12
   postcss-load-config: 3.1.4
   prettier: 2.6.2
@@ -20,13 +20,13 @@ specifiers:
 
 devDependencies:
   '@sveltejs/adapter-auto': 1.0.0-next.34
-  '@sveltejs/kit': 1.0.0-next.310_svelte@3.47.0
+  '@sveltejs/kit': 1.0.0-next.311_svelte@3.47.0
   '@tailwindcss/typography': 0.5.2_tailwindcss@3.0.23
   autoprefixer: 10.4.4_postcss@8.4.12
   cssnano: 5.1.7_postcss@8.4.12
   daisyui: 2.13.6_081650f2f4dba35b17265937ab2a2ec0
   houdini: 0.13.10
-  houdini-preprocess: 0.13.8
+  houdini-preprocess: 0.13.10
   postcss: 8.4.12
   postcss-load-config: 3.1.4_postcss@8.4.12
   prettier: 2.6.2
@@ -178,8 +178,8 @@ packages:
       esbuild: 0.14.29
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.310_svelte@3.47.0:
-    resolution: {integrity: sha512-pTyMyaoyHS+V5cQZIQMfQXmLkhw1VaRwT9avOSgwDc0QBpnNw2LdzwoPYsUr96ca5B6cfT3SMUNolxErTNHmPQ==}
+  /@sveltejs/kit/1.0.0-next.311_svelte@3.47.0:
+    resolution: {integrity: sha512-OkRIi0XBXcs16J+H+6fgOeFYxKu05gamY08KHAQ5cohjymUODGWIwaIfwAuNkZAcEEr8Vh2ejp4UcaxNzD53lQ==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
@@ -1104,6 +1104,16 @@ packages:
       function-bind: 1.1.1
     dev: true
 
+  /houdini-common/0.13.10_graphql@15.5.0:
+    resolution: {integrity: sha512-plqiAj09T7b6r/s4REiCnsbu+yNhIxwRgABShMRRM+dJK8fbGatPkDRRNBkmp3aJb9Aja0wdEFCEVEFtQdii/w==}
+    peerDependencies:
+      graphql: ^15.x
+    dependencies:
+      '@babel/parser': 7.16.4
+      graphql: 15.5.0
+      mkdirp: 1.0.4
+    dev: true
+
   /houdini-common/0.13.10_graphql@15.8.0:
     resolution: {integrity: sha512-plqiAj09T7b6r/s4REiCnsbu+yNhIxwRgABShMRRM+dJK8fbGatPkDRRNBkmp3aJb9Aja0wdEFCEVEFtQdii/w==}
     peerDependencies:
@@ -1114,25 +1124,15 @@ packages:
       mkdirp: 1.0.4
     dev: true
 
-  /houdini-common/0.13.8_graphql@15.5.0:
-    resolution: {integrity: sha512-pQ3l4VOBCGcG2NHnJYKaI2ean7fN3fJy1gnZOrTKpPupDahOrPekmGf877SguVeIB7ChF2mt44NQ7vS0r/Ur7g==}
-    peerDependencies:
-      graphql: ^15.x
-    dependencies:
-      '@babel/parser': 7.16.4
-      graphql: 15.5.0
-      mkdirp: 1.0.4
-    dev: true
-
-  /houdini-preprocess/0.13.8:
-    resolution: {integrity: sha512-VdtZjD3QfnK3B7FvxoPv6hM332W1r0RGFS1qiO3JOSvtINSuMnKyf1xpz+dI5Y0sPlVQj0dEqY0QAobij9m3Gw==}
+  /houdini-preprocess/0.13.10:
+    resolution: {integrity: sha512-sQCFhKzKJ9jqwYOh+bZU+ixmSliA1Ywiv6qNYt0SMAuMLlW3C0W5WlqkFmdkAR6Ppyk9ClD6gaONZRYtxMq8LA==}
     dependencies:
       '@types/mkdirp': 1.0.2
       babylon: 7.0.0-beta.47
       estree-walker: 2.0.2
       graphql: 15.5.0
       houdini: 0.13.10
-      houdini-common: 0.13.8_graphql@15.5.0
+      houdini-common: 0.13.10_graphql@15.5.0
       mkdirp: 1.0.4
       prettier: 2.6.2
       prettier-plugin-svelte: 2.7.0_prettier@2.6.2+svelte@3.47.0
