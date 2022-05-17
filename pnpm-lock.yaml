@@ -7,7 +7,7 @@ specifiers:
   autoprefixer: 10.4.7
   cssnano: 5.1.7
   daisyui: 2.14.3
-  houdini: 0.14.4
+  houdini: 0.14.5
   houdini-preprocess: 0.13.10
   postcss: 8.4.13
   postcss-load-config: 3.1.4
@@ -25,7 +25,7 @@ devDependencies:
   autoprefixer: 10.4.7_postcss@8.4.13
   cssnano: 5.1.7_postcss@8.4.13
   daisyui: 2.14.3_cr4sis33dk4di3xnobyqnqmrf4
-  houdini: 0.14.4
+  houdini: 0.14.5
   houdini-preprocess: 0.13.10
   postcss: 8.4.13
   postcss-load-config: 3.1.4_postcss@8.4.13
@@ -1696,8 +1696,8 @@ packages:
       - rollup
     dev: true
 
-  /houdini/0.14.4:
-    resolution: {integrity: sha512-Fxea4h6cYE1RXzFCQ8qnroHBxak8jjdxIY/ldv+zCenEnKjYWWYRD1jfEKvcroh4KKbG0vtP/PUHGAbJMk5y4w==}
+  /houdini/0.14.5:
+    resolution: {integrity: sha512-f00VNY8wcYCokji4viaXwae8+jqHaT4dEgQ4UKYVtB8+Mq4wi8+VaU2KDATZywd5ruzfE4HNXzHyQSBVQbPEVg==}
     hasBin: true
     dependencies:
       '@babel/parser': 7.17.12
