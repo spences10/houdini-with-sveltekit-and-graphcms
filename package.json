@@ -15,7 +15,7 @@
     "@sveltejs/kit": "next",
     "@tailwindcss/typography": "0.5.2",
     "autoprefixer": "10.4.7",
-    "cssnano": "5.1.9",
+    "cssnano": "5.1.10",
     "daisyui": "2.15.1",
     "houdini": "0.14.5",
     "houdini-preprocess": "0.13.10",
