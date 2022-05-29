@@ -19,7 +19,7 @@
     "daisyui": "2.15.1",
     "houdini": "0.14.5",
     "houdini-preprocess": "0.13.10",
-    "postcss": "8.4.13",
+    "postcss": "8.4.14",
     "postcss-load-config": "4.0.0",
     "prettier": "2.6.2",
     "prettier-plugin-svelte": "2.7.0",
